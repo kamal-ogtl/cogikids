@@ -393,6 +393,8 @@ export default function BossBattleScreen() {
                   key={i}
                   activeOpacity={0.85}
                   disabled={selected !== null || timedOut}
+                  accessibilityRole="button"
+                  accessibilityLabel={`Option ${i + 1}: ${opt}`}
                   style={[styles.answerBtn, { backgroundColor: bgColor, borderColor, opacity: opacityVal }]}
                   onPress={() => handleAnswer(i)}
                 >
