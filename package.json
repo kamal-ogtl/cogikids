@@ -1,6 +1,7 @@
 {
   "name": "cogniedufy-kids",
   "version": "1.0.0",
+  "description": "Mobile learning app for Nigerian children — spelling, maths, science and social studies",
   "main": "expo-router/entry",
   "scripts": {
     "start": "expo start",
