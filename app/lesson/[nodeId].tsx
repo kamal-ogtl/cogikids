@@ -13,8 +13,8 @@ import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { Ionicons } from '@expo/vector-icons';
 import { useLocalSearchParams, useRouter } from 'expo-router';
 import { FONTS, RADIUS, SHADOWS, SPACING } from '../../src/constants/theme';
-import { CURRICULUM_NODES } from '../../src/constants/curriculum';
-import { getLessonContent } from '../../src/constants/lessonContent';
+import { CURRICULUM_NODES, type CurriculumNode } from '../../src/constants/curriculum';
+import { getLessonContent, type LessonContent, type LessonSlide, type QuizQuestion } from '../../src/constants/lessonContent';
 import { useProgressStore } from '../../src/store/useProgressStore';
 import { usePlayerStore } from '../../src/store/usePlayerStore';
 import * as Speech from 'expo-speech';
@@ -37,6 +37,8 @@ const OPT_COLORS = ['#2563eb', '#dc2626', '#d97706', '#16a34a'];
 const OPT_ICONS: React.ComponentProps<typeof Ionicons>['name'][] = [
   'triangle', 'square', 'ellipse', 'star',
 ];
+
+type SubjectPalette = { label: string; accent: string; bg: string; cardBg: string };
 
 const CP_PER_LESSON = 40;
 
@@ -169,7 +171,10 @@ export default function LessonScreen() {
 
 // ─── Intro ────────────────────────────────────────────────────────────────────
 
-function IntroPhase({ node, sub, completed, stars, content, onStart, setOwlMood }: any) {
+function IntroPhase({ node, sub, completed, stars, content, onStart, setOwlMood }: {
+  node: CurriculumNode; sub: SubjectPalette; completed: boolean; stars: number;
+  content: LessonContent; onStart: () => void; setOwlMood: (m: OwlMood) => void;
+}) {
   const titleTy  = useRef(new Animated.Value(24)).current;
   const titleOp  = useRef(new Animated.Value(0)).current;
   const chipAnims = useRef(
@@ -239,7 +244,7 @@ function IntroPhase({ node, sub, completed, stars, content, onStart, setOwlMood 
       {content && (
         <View style={styles.previewSection}>
           <Text style={styles.previewLabel}>What you'll learn</Text>
-          {content.slides.map((slide: any, i: number) => {
+          {content.slides.map((slide: LessonSlide, i: number) => {
             const { op, ty } = chipAnims[i] ?? chipAnims[0];
             return (
               <Animated.View
@@ -251,7 +256,7 @@ function IntroPhase({ node, sub, completed, stars, content, onStart, setOwlMood 
                 ]}
               >
                 <View style={[styles.slidePreviewIcon, { backgroundColor: sub.accent + '20' }]}>
-                  <Ionicons name={slide.icon as any} size={20} color={sub.accent} />
+                  <Ionicons name={slide.icon as React.ComponentProps<typeof Ionicons>['name']} size={20} color={sub.accent} />
                 </View>
                 <Text style={styles.slidePreviewText}>{slide.heading}</Text>
                 <Ionicons name="chevron-forward" size={14} color={sub.accent + '88'} />
@@ -288,7 +293,10 @@ function IntroPhase({ node, sub, completed, stars, content, onStart, setOwlMood 
 
 // ─── Learn (tutor-style) ─────────────────────────────────────────────────────
 
-function LearnPhase({ sub, slides, slideIdx, onNext, setOwlMood }: any) {
+function LearnPhase({ sub, slides, slideIdx, onNext, setOwlMood }: {
+  sub: SubjectPalette; slides: LessonSlide[]; slideIdx: number;
+  onNext: () => void; setOwlMood: (m: OwlMood) => void;
+}) {
   const slide  = slides[slideIdx];
   const isLast = slideIdx === slides.length - 1;
 
@@ -376,7 +384,7 @@ function LearnPhase({ sub, slides, slideIdx, onNext, setOwlMood }: any) {
       {/* Tutor card — icon + heading + hear-again */}
       <View style={[styles.tutorCard, { backgroundColor: sub.cardBg, borderColor: sub.accent + '55' }]}>
         <View style={[styles.slideIconBadge, { backgroundColor: sub.accent + '20' }]}>
-          <Ionicons name={slide.icon as any} size={32} color={sub.accent} />
+          <Ionicons name={slide.icon as React.ComponentProps<typeof Ionicons>['name']} size={32} color={sub.accent} />
         </View>
         <View style={styles.tutorCardBody}>
           <Text style={[styles.tutorHeading, { color: sub.accent }]}>{slide.heading}</Text>
@@ -443,7 +451,10 @@ function LearnPhase({ sub, slides, slideIdx, onNext, setOwlMood }: any) {
 
 // ─── Quiz ─────────────────────────────────────────────────────────────────────
 
-function QuizPhase({ sub, questions, quizIdx, selected, onSelect, onNext }: any) {
+function QuizPhase({ sub, questions, quizIdx, selected, onSelect, onNext }: {
+  sub: SubjectPalette; questions: QuizQuestion[]; quizIdx: number;
+  selected: number | null; onSelect: (i: number) => void; onNext: () => void;
+}) {
   const q        = questions[quizIdx];
   const answered = selected !== null;
   const pct      = ((quizIdx + 1) / questions.length) * 100;
@@ -503,7 +514,11 @@ function QuizPhase({ sub, questions, quizIdx, selected, onSelect, onNext }: any)
 
 // ─── Kids Option (Kahoot style) ───────────────────────────────────────────────
 
-function KidsOption({ idx, text, color, icon, selected, correct, answered, onPress }: any) {
+function KidsOption({ idx, text, color, icon, selected, correct, answered, onPress }: {
+  idx: number; text: string; color: string;
+  icon: React.ComponentProps<typeof Ionicons>['name'];
+  selected: boolean; correct: boolean; answered: boolean; onPress: () => void;
+}) {
   const scale  = useRef(new Animated.Value(1)).current;
   const shakeX = useRef(new Animated.Value(0)).current;
   const pulse  = useRef(new Animated.Value(1)).current;
@@ -601,7 +616,10 @@ function FeedbackBanner({ correct }: { correct: boolean }) {
 
 // ─── Complete ─────────────────────────────────────────────────────────────────
 
-function CompletePhase({ sub, score, total, answers, onBack }: any) {
+function CompletePhase({ sub, score, total, answers, onBack }: {
+  sub: SubjectPalette; score: number; total: number;
+  answers: (number | null)[]; onBack: () => void;
+}) {
   const stars = score === total ? 3 : score >= total - 1 ? 2 : 1;
 
   const cardScale = useRef(new Animated.Value(0.6)).current;
