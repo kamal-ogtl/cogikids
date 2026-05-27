@@ -108,7 +108,7 @@ export default function BossBattleScreen() {
     timerRunning.current.start(({ finished }) => {
       if (finished) handleTimeout();
     });
-  }, [qIdx]);
+  }, [qIdx, playerHP, bossHP]);
 
   const stopTimer = useCallback(() => {
     timerRunning.current?.stop();
