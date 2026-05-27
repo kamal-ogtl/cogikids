@@ -5,11 +5,13 @@ Mobile client for the Cogniedufy educational platform. Built with React Native a
 ## Technical Stack
 
 - **Framework**: Expo (SDK 54)
-- **Navigation**: Expo Router (File-based routing)
+- **Navigation**: Expo Router (file-based routing)
 - **State Management**: Zustand
-- **Styling**: NativeWind (Tailwind CSS v4)
-- **Persistence**: MMKV
-- **Animations**: React Native Reanimated & Lottie
+- **Styling**: React Native StyleSheet with custom design tokens
+- **Persistence**: MMKV (with in-memory fallback for Expo Go)
+- **Animations**: React Native Animated API (spring + timing)
+- **Text-to-Speech**: Expo Speech
+- **Languages**: English, Hausa, Yoruba, Igbo
 
 ## Getting Started
 
@@ -63,7 +65,9 @@ npm run web
 
 ## Standards
 
-- **Styling**: Use Tailwind classes via NativeWind. Avoid inline styles or StyleSheet where possible.
-- **State**: Use Zustand for global state and MMKV for persistent local storage.
-- **Routing**: Follow Expo Router conventions for nested layouts and dynamic segments.
-- **Environment**: Use `EXPO_PUBLIC_` prefix for variables that need to be accessible at runtime.
+- **Styling**: Use `StyleSheet.create` with theme tokens from `src/constants/theme.ts`. No inline styles.
+- **State**: Zustand for global state, MMKV for persistent local storage.
+- **Routing**: Expo Router conventions — nested layouts and dynamic segments.
+- **Environment**: `EXPO_PUBLIC_` prefix for runtime-accessible variables.
+- **Icons**: Ionicons only — no emoji in UI code.
+- **Sounds**: Gate all `playSound` calls through `useSettingsStore.soundEnabled`.
