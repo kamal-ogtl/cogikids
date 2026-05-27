@@ -13,13 +13,15 @@
       "backgroundColor": "#ffffff"
     },
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": false,
+      "bundleIdentifier": "com.cogniedufy.kids"
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
-        "backgroundColor": "#ffffff"
+        "backgroundColor": "#0ea5e9"
       },
+      "package": "com.cogniedufy.kids",
       "edgeToEdgeEnabled": true,
       "predictiveBackGestureEnabled": false
     },
