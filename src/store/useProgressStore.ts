@@ -9,7 +9,7 @@ export interface NodeProgress {
   lastPlayedAt: string | null;
 }
 
-interface ProgressStore {
+export interface ProgressStore {
   nodes: Record<string, NodeProgress>;
   beatenBosses: Record<string, number>; // bossId → win count
   unlockNode: (nodeId: string) => void;

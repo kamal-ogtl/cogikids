@@ -1,7 +1,7 @@
 import { create } from 'zustand';
 import type { SupportedLanguage } from '../constants/languages';
 
-interface SettingsStore {
+export interface SettingsStore {
   nativeLanguage: SupportedLanguage;
   soundEnabled: boolean;
   ttsEnabled: boolean;

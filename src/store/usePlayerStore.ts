@@ -16,7 +16,7 @@ export interface Player {
   lastLoginDate: string | null;
 }
 
-interface PlayerStore {
+export interface PlayerStore {
   player: Player | null;
   token: string | null;
   setPlayer: (player: Player) => void;

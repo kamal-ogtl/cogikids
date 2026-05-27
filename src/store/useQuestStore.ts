@@ -1,6 +1,6 @@
 import { create } from 'zustand';
 
-interface QuestStore {
+export interface QuestStore {
   date: string;          // YYYY-MM-DD of current quest day
   roundsToday: number;   // spelling bee rounds completed today
   dailyGoal: number;
