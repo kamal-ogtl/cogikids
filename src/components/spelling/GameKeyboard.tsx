@@ -78,6 +78,8 @@ function LetterKey({
       onPressOut={pressOut}
       activeOpacity={1}
       disabled={disabled}
+      accessibilityRole="button"
+      accessibilityLabel={`Letter ${letter}`}
     >
       <Animated.View
         style={[
@@ -118,6 +120,8 @@ function BackspaceKey({ onPress, disabled }: { onPress: () => void; disabled?: b
       onPressOut={pressOut}
       activeOpacity={1}
       disabled={disabled}
+      accessibilityRole="button"
+      accessibilityLabel="Backspace"
     >
       <Animated.View
         style={[
