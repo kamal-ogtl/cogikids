@@ -1,3 +1,8 @@
+/**
+ * Settings store — user preferences: native language (for hints/TTS), sound
+ * effects toggle and text-to-speech toggle. Read in non-hook contexts via
+ * useSettingsStore.getState() (e.g. the playSound utility).
+ */
 import { create } from 'zustand';
 import type { SupportedLanguage } from '../constants/languages';
 
