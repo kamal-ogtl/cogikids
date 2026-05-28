@@ -1,3 +1,8 @@
+/**
+ * Quest store — tracks the daily Spelling Bee challenge. Counts rounds completed
+ * today against a fixed daily goal and auto-resets the counter when a new day
+ * begins. Drives the quest progress strip on the home dashboard.
+ */
 import { create } from 'zustand';
 
 export interface QuestStore {
