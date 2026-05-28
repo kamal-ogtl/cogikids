@@ -1,3 +1,8 @@
+/**
+ * Progress store — tracks per-node lesson completion (stars, high score, unlock
+ * state) and boss win counts for the Battle Arena. Hydrates from the server when
+ * online and falls back to in-memory state when offline.
+ */
 import { create } from 'zustand';
 
 export interface NodeProgress {
