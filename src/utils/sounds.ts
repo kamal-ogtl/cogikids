@@ -1,3 +1,9 @@
+/**
+ * Sound effects — short UI cues (tap, correct, wrong, complete, rocket, slide)
+ * stored as inline base64 WAV data URIs so they ship with the bundle and play
+ * offline. Every playback is gated on the soundEnabled setting, read here via
+ * getState() because this is a plain async function, not a React hook.
+ */
 import { Audio } from 'expo-av';
 import { useSettingsStore } from '../store/useSettingsStore';
 
