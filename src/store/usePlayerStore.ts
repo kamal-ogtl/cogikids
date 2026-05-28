@@ -1,3 +1,8 @@
+/**
+ * Player store — holds the authenticated player profile and auth token.
+ * Exposes XP/level progression and a daily-streak check. Cleared on sign-out,
+ * which also wipes the cached token so the root index redirects to onboarding.
+ */
 import { create } from 'zustand';
 import type { AgeGroup } from '../constants/curriculum';
 import type { SupportedLanguage } from '../constants/languages';
