@@ -1,5 +1,11 @@
+/**
+ * Curriculum lookup helpers — filter and resolve curriculum nodes by subject,
+ * age group and prerequisite. Drives the skills tree: getAvailableNodes returns
+ * only the nodes a player has unlocked based on completed prerequisites.
+ */
 import { CURRICULUM_NODES, CurriculumNode, Subject, AgeGroup } from '../constants/curriculum';
 
+/** All nodes for a subject + age group, ordered by level. */
 export function getNodesForSubject(subject: Subject, ageGroup: AgeGroup): CurriculumNode[] {
   return CURRICULUM_NODES.filter(
     (n) => n.subject === subject && n.ageGroup === ageGroup,
