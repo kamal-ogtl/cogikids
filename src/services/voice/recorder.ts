@@ -1,3 +1,9 @@
+/**
+ * Microphone recorder — thin wrapper over expo-av for capturing a single audio
+ * clip at a time. Used by the pronunciation-scoring flow in Spelling Bee.
+ * Holds one active recording in module scope; callers must stop before starting
+ * a new one.
+ */
 import { Audio } from 'expo-av';
 
 let recording: Audio.Recording | null = null;
