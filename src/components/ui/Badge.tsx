@@ -1,3 +1,7 @@
+/**
+ * Badge — small pill label with an optional leading icon. Five colour variants
+ * (gold, primary, correct, wrong, muted) map to the shared theme palette.
+ */
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 import { COLORS, FONTS, RADIUS, SPACING } from '../../constants/theme';
