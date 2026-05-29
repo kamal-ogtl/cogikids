@@ -1,3 +1,7 @@
+/**
+ * Button — primary pressable with five variants (primary, secondary, danger,
+ * ghost, gradient), optional loading spinner and leading/trailing icon slots.
+ */
 import React from 'react';
 import {
   ActivityIndicator,
