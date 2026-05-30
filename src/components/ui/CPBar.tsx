@@ -1,3 +1,7 @@
+/**
+ * CPBar — animated Cognitive Points (XP) progress bar. Fills from the current xp
+ * toward maxXP for the player's level, with an optional level/percentage label.
+ */
 import React, { useEffect, useRef } from 'react';
 import { Animated, StyleSheet, Text, View } from 'react-native';
 import { COLORS, FONTS, RADIUS, SPACING } from '../../constants/theme';
