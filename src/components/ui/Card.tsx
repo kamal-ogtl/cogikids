@@ -1,3 +1,7 @@
+/**
+ * Card — surface container with configurable padding scale, optional shadow and
+ * a default/alt background variant. Spreads through any extra ViewProps.
+ */
 import React from 'react';
 import { StyleSheet, View, ViewProps } from 'react-native';
 import { COLORS, RADIUS, SHADOWS, SPACING } from '../../constants/theme';
