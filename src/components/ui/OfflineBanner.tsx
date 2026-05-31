@@ -1,3 +1,7 @@
+/**
+ * OfflineBanner — top-of-screen strip shown only when the device is offline.
+ * Reads connectivity from the useOffline hook and renders nothing when online.
+ */
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
