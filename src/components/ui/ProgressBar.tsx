@@ -1,3 +1,7 @@
+/**
+ * ProgressBar — generic animated fill bar driven by a 0–1 value. Configurable
+ * colour, height and track background. Used for lesson/quiz progress.
+ */
 import React, { useEffect, useRef } from 'react';
 import { Animated, StyleSheet, View } from 'react-native';
 import { COLORS, RADIUS } from '../../constants/theme';
