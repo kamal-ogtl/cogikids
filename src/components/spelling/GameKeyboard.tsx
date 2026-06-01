@@ -1,3 +1,8 @@
+/**
+ * GameKeyboard — kid-friendly A–Z keyboard for the Spelling Bee. Each letter key
+ * gets a fixed colour from a rotating palette and a 3D press animation; the last
+ * key is backspace. Emits the pressed letter (or '⌫') via onKey.
+ */
 import React, { useRef } from 'react';
 import { Animated, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
