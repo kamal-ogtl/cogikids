@@ -1,3 +1,7 @@
+/**
+ * WaveformVisualizer — row of animated bars that pulse while audio is playing.
+ * Driven by the `active` flag; idles flat when speech stops. Purely decorative.
+ */
 import React, { useEffect, useRef } from 'react';
 import { Animated, StyleSheet, View } from 'react-native';
 import { COLORS } from '../../constants/theme';
