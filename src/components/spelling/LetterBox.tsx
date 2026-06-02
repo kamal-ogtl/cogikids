@@ -1,3 +1,8 @@
+/**
+ * LetterBox — a single slot in the Spelling Bee answer row. Its colour and border
+ * reflect a state (empty, filled, correct, wrong, revealed) and it pops with a
+ * spring animation when a letter lands.
+ */
 import React, { useEffect, useRef } from 'react';
 import { Animated, StyleSheet, Text } from 'react-native';
 import { COLORS, FONTS, RADIUS } from '../../constants/theme';
