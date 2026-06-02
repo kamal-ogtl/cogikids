@@ -1,3 +1,8 @@
+/**
+ * API client — thin typed wrapper over fetch for the Cogniedufy backend. Every
+ * call attaches a Bearer token and JSON headers; non-2xx responses throw with the
+ * method, endpoint, status and body text. Base URL comes from EXPO_PUBLIC_API_BASE_URL.
+ */
 const BASE_URL = process.env.EXPO_PUBLIC_API_BASE_URL ?? 'https://api.cogniedufy.com';
 
 type HttpMethod = 'GET' | 'POST' | 'PATCH' | 'DELETE';
