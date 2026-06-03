@@ -1,3 +1,8 @@
+/**
+ * Cache — typed convenience layer over the key-value storage abstraction. Stores
+ * the auth token and serialised app data so the client works offline; the root
+ * index reads the token here to decide between onboarding and the main app.
+ */
 import storage from './storage';
 
 const KEYS = {
