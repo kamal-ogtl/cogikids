@@ -1,3 +1,8 @@
+/**
+ * Sync — reconciles locally cached progress with the backend when connectivity
+ * returns. Pushes queued offline actions and pulls the latest server state so the
+ * two stay consistent across sessions.
+ */
 import apiClient from '../api/client';
 import cache from './cache';
 
