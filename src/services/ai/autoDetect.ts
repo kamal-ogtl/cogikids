@@ -1,3 +1,8 @@
+/**
+ * Language auto-detection. isLikelyHausa is a fast offline heuristic over a small
+ * common-word set (used when the network is down); detectLanguageRemote calls the
+ * Gemini-backed endpoint for accurate detection when online.
+ */
 import apiClient from '../api/client';
 
 // Hausa word list for offline fallback — common words a child might type
