@@ -1,3 +1,8 @@
+/**
+ * Companion chat — sends the conversation history and the child's latest message
+ * to the AI companion endpoint and returns a reply plus an emotion cue that drives
+ * the BeeOwl's expression (happy, thinking, celebrating, encouraging).
+ */
 import apiClient from '../api/client';
 
 export interface CompanionMessage {
