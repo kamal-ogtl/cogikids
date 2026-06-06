@@ -1,3 +1,7 @@
+/**
+ * Profile setup — avatar selection and profile customisation. Placeholder screen
+ * reserved for Phase 8; currently shows a "coming soon" state.
+ */
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
