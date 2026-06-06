@@ -1,3 +1,7 @@
+/**
+ * Root index — entry redirect. Sends signed-in users (player in memory or a
+ * cached token) straight to the tabs, and everyone else to onboarding.
+ */
 import { Redirect } from 'expo-router';
 import { usePlayerStore } from '../src/store/usePlayerStore';
 import cache from '../src/services/offline/cache';
