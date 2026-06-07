@@ -1,3 +1,8 @@
+/**
+ * Battle Arena screen — lists the four subject bosses as full-width cards. Cards
+ * lock below the boss's minimum level and show a DEFEATED badge once beaten,
+ * tapping through to the boss battle.
+ */
 import React, { useEffect, useRef } from 'react';
 import {
   Animated,
