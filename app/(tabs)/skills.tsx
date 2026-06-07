@@ -1,3 +1,8 @@
+/**
+ * Skills screen — the curriculum skill tree. Lets the player switch between the
+ * four subjects and shows each node's unlock/completion state with stars. Opens
+ * on the subject passed via the `subject` route param (defaults to English).
+ */
 import React, { useEffect, useMemo, useRef, useState } from 'react';
 import {
   Animated,
