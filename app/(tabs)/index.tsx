@@ -1,3 +1,8 @@
+/**
+ * Home dashboard — the main landing tab. Greets the player, shows a subject
+ * carousel and four subject cards (each routing into the skills tree) plus the
+ * daily quest strip backed by the quest store.
+ */
 import React, { useEffect, useMemo, useRef, useState } from 'react';
 import {
   Animated,
