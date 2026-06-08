@@ -1,3 +1,8 @@
+/**
+ * Profile screen — player hero card (avatar, level, streak, language, age group),
+ * XP progress and lifetime stats, plus settings toggles for text-to-speech and
+ * sound effects, and a sign-out action.
+ */
 import React, { useEffect, useRef } from 'react';
 import {
   Animated,
