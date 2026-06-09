@@ -1,3 +1,8 @@
+/**
+ * Onboarding — multi-step first-run flow. Collects the child's name, age group
+ * (explorer/strategist) and native language, then creates the local player
+ * profile, caches the token and lands the user on the tabs.
+ */
 import React, { useEffect, useRef, useState } from 'react';
 import {
   Animated,
