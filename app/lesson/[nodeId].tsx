@@ -1,3 +1,8 @@
+/**
+ * Lesson screen — the four-phase lesson runner for a single curriculum node:
+ * intro → learn (slides) → quiz → complete. Reads lesson content by nodeId,
+ * awards CP and stars on completion and records progress in the progress store.
+ */
 import React, { useEffect, useMemo, useRef, useState } from 'react';
 import {
   Animated,
