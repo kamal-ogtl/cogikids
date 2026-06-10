@@ -1,3 +1,8 @@
+/**
+ * Boss definitions for the Battle Arena — one boss per subject, each with HP,
+ * minimum unlock level, CP reward, theme colours and a pool of battle questions.
+ * Questions are drawn per subject and age group to match the player's lessons.
+ */
 import type { Subject } from './curriculum';
 import { CURRICULUM_NODES } from './curriculum';
 import { getLessonContent } from './lessonContent';
