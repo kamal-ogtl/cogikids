@@ -1,3 +1,9 @@
+/**
+ * Boss battle — Kahoot-style quiz duel against a subject boss. Player and boss
+ * each have HP; correct answers damage the boss, wrong answers or timeouts damage
+ * the player. A per-question countdown drives the timer bar; win/lose overlays
+ * award CP and mark the boss beaten.
+ */
 import React, { useCallback, useEffect, useRef, useState } from 'react';
 import {
   Animated,
