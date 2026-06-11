@@ -1,3 +1,8 @@
+/**
+ * Word bank — spelling words for the Spelling Bee, each with a definition and
+ * translations in the supported Nigerian languages. pickWords samples a round's
+ * words by age group; getNativeHint surfaces a translation hint.
+ */
 import type { AgeGroup } from './curriculum';
 import type { SupportedLanguage } from './languages';
 
