@@ -1,3 +1,7 @@
+/**
+ * useOffline — subscribes to device connectivity via NetInfo and exposes a simple
+ * isOnline flag. Drives the OfflineBanner and any connectivity-gated behaviour.
+ */
 import { useEffect, useRef, useState } from 'react';
 import NetInfo, { NetInfoState } from '@react-native-community/netinfo';
 import { flushSyncQueue } from '../services/offline/sync';
