@@ -1,3 +1,8 @@
+/**
+ * useXP — convenience hook over the player store for awarding XP. awardXP grants
+ * a base amount per correct answer plus a streak bonus, and exposes the current
+ * XP, level and threshold for the next level.
+ */
 import { usePlayerStore } from '../store/usePlayerStore';
 
 const XP_PER_CORRECT = 10;
