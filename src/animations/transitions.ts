@@ -1,3 +1,7 @@
+/**
+ * Animation presets — reusable Reanimated timing/spring/sequence helpers so
+ * screens share consistent motion curves and durations.
+ */
 import { withTiming, withSpring, withSequence, Easing } from 'react-native-reanimated';
 
 // Reusable Reanimated animation presets
