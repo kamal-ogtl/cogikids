@@ -1,3 +1,8 @@
+/**
+ * Pronunciation scoring — uploads a recorded audio clip and target word to the
+ * backend, which runs Gemini multimodal scoring and returns clarity/accuracy
+ * marks plus feedback in both English and the child's native language.
+ */
 import apiClient from '../api/client';
 
 export interface PronunciationScore {
