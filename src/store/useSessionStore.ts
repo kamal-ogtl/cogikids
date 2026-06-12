@@ -1,3 +1,7 @@
+/**
+ * Session store — ephemeral, in-memory state for the currently active lesson or
+ * game session (current node, score, progress). Not persisted; reset between runs.
+ */
 import { create } from 'zustand';
 
 // Tracks the currently active lesson/game session in memory.
