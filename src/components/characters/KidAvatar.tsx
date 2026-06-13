@@ -1,3 +1,7 @@
+/**
+ * KidAvatar — SVG avatar illustration for the player, shown in the home header
+ * and profile. Sizeable via a single `size` prop.
+ */
 import React from 'react';
 import { View, StyleSheet } from 'react-native';
 import Svg, { Circle, Ellipse, Path, Polygon } from 'react-native-svg';
