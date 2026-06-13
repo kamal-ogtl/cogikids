@@ -1,3 +1,7 @@
+/**
+ * Boss backgrounds — per-boss SVG scene illustrations rendered behind each Battle
+ * Arena card and on the battle screen. BOSS_BG maps a boss id to its background.
+ */
 import React from 'react';
 import Svg, { Circle, Ellipse, Line, Path, Polygon, Rect, Text as SvgText, G } from 'react-native-svg';
 
