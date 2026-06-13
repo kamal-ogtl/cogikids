@@ -1,3 +1,8 @@
+/**
+ * Lesson generator — requests an AI-generated lesson (slides + quiz) for a given
+ * subject, age group and topic from the backend, used to extend the curriculum
+ * beyond the bundled static lesson content.
+ */
 import apiClient from '../api/client';
 import type { AgeGroup, Subject } from '../../constants/curriculum';
 
