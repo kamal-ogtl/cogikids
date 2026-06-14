@@ -1,6 +1,8 @@
-// Pure JS mock for react-native-mmkv.
-// Used by Metro when bundling for Expo Go (no native modules available).
-// Provides the same interface as react-native-mmkv but stores data in memory.
+/**
+ * MMKV mock — pure-JS stand-in for react-native-mmkv, swapped in by Metro when
+ * bundling for Expo Go (no native modules). Implements the same interface but
+ * stores everything in an in-memory map.
+ */
 
 function createMMKV() {
   const store = new Map();
