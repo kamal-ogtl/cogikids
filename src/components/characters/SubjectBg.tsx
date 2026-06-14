@@ -1,3 +1,7 @@
+/**
+ * Subject backgrounds — per-subject SVG scene illustrations (English, Math,
+ * Science, Social) that fill any container via preserveAspectRatio.
+ */
 import React from 'react';
 import Svg, {
   Circle, Ellipse, Line, Path, Polygon, Rect, Text as SvgText, G,
