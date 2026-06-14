@@ -28,6 +28,7 @@ const GREETINGS = [
 ];
 
 // ─── Cogi the Owl (welcome) ───────────────────────────────────────────────────
+/** CogiOwl — animated owl mascot shown during the onboarding welcome step. */
 export function CogiOwl({ size = 160 }: { size?: number }) {
   const waveAnim    = useRef(new Animated.Value(0)).current;
   const twinkleL    = useRef(new Animated.Value(1)).current;
