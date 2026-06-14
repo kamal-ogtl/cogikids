@@ -1,3 +1,7 @@
+/**
+ * Carousel + arena backgrounds — decorative SVG scenes used behind the home
+ * carousel cards and the Battle Arena hero banner.
+ */
 import React from 'react';
 import Svg, {
   Circle, Ellipse, Line, Path, Polygon, Rect, Text as SvgText, G,
