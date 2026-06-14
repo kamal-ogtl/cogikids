@@ -1,5 +1,7 @@
-// Lottie animation source paths.
-// Drop the .json files from lottiefiles.com into src/animations/lottie/
+/**
+ * Celebration animations — Lottie source paths for reward/celebration effects.
+ * Drop the .json files from lottiefiles.com into src/animations/lottie/.
+ */
 
 export const LOTTIE = {
   owlIdle:        require('./lottie/owl-idle.json'),
