@@ -1,6 +1,8 @@
-// Lottie wrapper with Expo Go fallback.
-// In a real dev/production build, renders the actual Lottie animation.
-// In Expo Go where lottie-react-native is unavailable, shows a plain emoji.
+/**
+ * LottieView — wrapper around lottie-react-native with an Expo Go fallback.
+ * Renders the real Lottie animation in dev/production builds; in Expo Go, where
+ * the native module is unavailable, it shows a plain emoji placeholder instead.
+ */
 
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
