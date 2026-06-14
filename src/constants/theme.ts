@@ -1,6 +1,8 @@
-// Design tokens extracted from the main CogniEdufy frontend.
-// Source: cogniedufy_frontend/tailwind.config.js and src/index.css
-// All UI components must import from here — never hardcode color strings.
+/**
+ * Design tokens — colours, fonts, spacing, radius and shadows for the whole app.
+ * Extracted from the main CogniEdufy frontend (tailwind.config.js + index.css).
+ * All UI components must import from here — never hardcode colour strings.
+ */
 
 export const COLORS = {
   bg: {
