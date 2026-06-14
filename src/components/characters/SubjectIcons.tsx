@@ -6,6 +6,7 @@ import React from 'react';
 import Svg, { Circle, Ellipse, Line, Path, Polygon, Rect, G } from 'react-native-svg';
 
 // ─── English — open book with a speech bubble ────────────────────────────────
+/** English subject icon — sizeable, tinted SVG illustration. */
 export function EnglishIcon({ size = 56, color = '#0ea5e9' }: { size?: number; color?: string }) {
   return (
     <Svg width={size} height={size} viewBox="0 0 56 56">
