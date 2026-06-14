@@ -1,3 +1,7 @@
+/**
+ * Boss characters — animated SVG character illustrations for the four arena
+ * bosses (Numborr, Lexi, Scorp, Rex) plus shared subject/skills mascots.
+ */
 import React, { useEffect, useRef } from 'react';
 import { Animated } from 'react-native';
 import Svg, { Circle, Ellipse, Line, Path, Polygon, Rect, G } from 'react-native-svg';
