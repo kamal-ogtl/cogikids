@@ -1,7 +1,8 @@
-// Thin storage abstraction.
-// Uses MMKV in a real dev/production build (fast, persistent).
-// Falls back to an in-memory map in Expo Go where native modules aren't available.
-// Import this everywhere instead of using createMMKV directly.
+/**
+ * Storage abstraction — key-value persistence backed by MMKV in dev/production
+ * builds, falling back to an in-memory map in Expo Go where native modules are
+ * unavailable. Import this everywhere instead of using createMMKV directly.
+ */
 
 export interface StorageBackend {
   getString(key: string): string | undefined;
