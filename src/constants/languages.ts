@@ -1,3 +1,7 @@
+/**
+ * Supported languages — the four languages the app teaches and scaffolds in:
+ * English plus the three major Nigerian languages (Hausa, Yoruba, Igbo).
+ */
 export type SupportedLanguage = 'hausa' | 'english' | 'yoruba' | 'igbo';
 
 export const LANGUAGES: Record<SupportedLanguage, { label: string; nativeName: string; code: string }> = {
