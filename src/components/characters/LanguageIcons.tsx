@@ -43,6 +43,7 @@ function NigerianFlagBase({ id }: { id: string }) {
 }
 
 // ─── Hausa — Nigerian flag + crescent & star (symbol of northern Nigeria) ────
+/** Hausa language flag icon — Nigerian flag with a distinct cultural symbol. */
 export function HausaFlag({ size = 80 }: { size?: number }) {
   return (
     <Svg width={size} height={size * (H / W)} viewBox={`0 0 ${W} ${H}`}>
