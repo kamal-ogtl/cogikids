@@ -1,3 +1,7 @@
+/**
+ * Root layout — loads fonts, keeps the splash screen up until they're ready, and
+ * wraps the app in gesture, safe-area and offline-banner providers.
+ */
 import { useFonts, Inter_400Regular, Inter_500Medium, Inter_600SemiBold, Inter_700Bold } from '@expo-google-fonts/inter';
 import { FredokaOne_400Regular } from '@expo-google-fonts/fredoka-one';
 import { Slot, SplashScreen } from 'expo-router';
