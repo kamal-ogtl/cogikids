@@ -1,3 +1,8 @@
+/**
+ * Tabs layout — bottom tab bar (Home, Skills, Arena, Bee) with a liquid-glass
+ * blurred pill background. Runs the daily streak check on mount; Profile is
+ * hidden from the bar and reached via the header avatar.
+ */
 import { Tabs } from 'expo-router';
 import { useEffect } from 'react';
 import { StyleSheet, View } from 'react-native';
