@@ -1,3 +1,7 @@
+/**
+ * Text-to-speech — wraps expo-speech for offline device TTS. Stops any current
+ * speech before speaking to avoid an Android race, and treats stop/error as done.
+ */
 import * as Speech from 'expo-speech';
 
 export interface SpeakOptions {
