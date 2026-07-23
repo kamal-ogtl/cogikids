@@ -133,7 +133,7 @@ Weekly progress updates posted throughout the hackathon:
 - [Week 9](https://x.com/cedufy/status/2071266118870667762?s=20)
 - [Week 10](https://x.com/cedufy/status/2073838348129505601?s=20)
 - [Week 11](https://x.com/cedufy/status/2077521657095151917?s=20)
-- [Week 12](https://x.com/cedufy/status/2080244265691598922?s=20)
+- [Week 12](https://x.com/cedufy/status/2080245779977900221?s=20)
 
 ---
 
