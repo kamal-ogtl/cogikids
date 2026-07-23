@@ -1,6 +1,6 @@
-# Gimbalabs Piece of Pie Hackathon 2026 — Submission
+# Gimbalabs Piece of Pie Hackathon 2026: Submission
 
-**CogniKids** — AI Learning App for Children with Cardano Rewards  
+**CogniKids** - AI Learning App for Children with Cardano Rewards  
 **Team:** Kamal Aliyu, solo  
 **Track:** Builder Pie
 
@@ -9,7 +9,7 @@
 ## Project Identity
 
 - **Official public repository:** [github.com/kamal-ogtl/cogikids](https://github.com/kamal-ogtl/cogikids)
-- **Deployed product link:** Currently under review on the Google Play Store — link will be added the moment it is approved
+- **Deployed product link:** Currently under review on the Google Play Store. Link will be added the moment it is approved.
 - **Primary X posting account:** [@cedufy](https://x.com/cedufy)
 - **Team members:** Kamal Aliyu, solo
 
@@ -18,20 +18,20 @@
 ## What the Product Does
 
 **Who the user is**  
-Parents who want their children aged 5–12 to learn through play, and kids who want to earn real rewards for real progress.
+Parents who want their children aged 5-12 to learn through play, and kids who want to earn real rewards for real progress.
 
 **What the user can do**  
 - Children log in, pick a learning path (vocabulary, grammar, or math), and work through structured lesson nodes
 - They practice spelling in a timed Bee mode with streak tracking
-- They challenge boss characters in a battle arena — answering questions chips away at the boss's HP
+- They challenge boss characters in a battle arena by answering questions that chip away at the boss's HP
 - They talk live with Cogi, the AI companion, who speaks and listens using a Gemini-powered backend
 - Every milestone earned is rewarded with COGI tokens sent directly to their Cardano wallet
 
 **What value the user gets**  
-Progress that means something beyond the app. Points systems disappear when subscriptions lapse. COGI tokens live on-chain — if CogniKids ever shuts down, the tokens remain in the child's wallet. The family actually owns the reward.
+Progress that means something beyond the app. Points systems disappear when subscriptions lapse. COGI tokens live on-chain, so if CogniKids ever shuts down, the tokens remain in the child's wallet. The family actually owns the reward.
 
 **Where payment happens**  
-CogniKids runs a subscription tier that gates premium content — additional lesson packs, advanced bosses, and extended AI session time. Kids also earn CP (Cogi Points) as they learn, which unlocks content progression and in-app rewards without requiring a paid tier. The subscription is handled in-app through the Play Store billing system.
+CogniKids runs a subscription tier that gates premium content: additional lesson packs, advanced bosses, and extended AI session time. Kids also earn CP (Cogi Points) as they learn, which unlocks content progression and in-app rewards without needing a paid tier. The subscription is handled in-app through the Play Store billing system.
 
 ---
 
@@ -39,15 +39,15 @@ CogniKids runs a subscription tier that gates premium content — additional les
 
 Recommended flow:
 
-1. **Entry screen** — "Smart Learning for Curious Kids" — two paths: fresh start or resume journey
-2. **Onboarding** — parent sets up child's name, age, and Cardano wallet address
-3. **Home tab** — skill tree showing locked and unlocked lesson nodes
-4. **Lesson node** — tap a node, answer questions, earn XP and CP on completion
-5. **Spelling Bee** — timed spelling rounds with the custom on-screen keyboard; streak tracked across days
-6. **Battle Arena** — select a boss, enter the fighting-game screen, answer questions to drain the boss's HP
-7. **Live AI session (Cogi Talk)** — full-screen nature scene, Cogi character floats and speaks, timer runs
-8. **COGI reward** — on node completion, level-up, or 7-day streak, a mint is queued and processed to the child's wallet
-9. **Profile** — XP bar, level, streak count, CP balance, and wallet address
+1. **Entry screen**: "Smart Learning for Curious Kids", two paths: fresh start or resume journey
+2. **Onboarding**: parent sets up child's name, age, and Cardano wallet address
+3. **Home tab**: skill tree showing locked and unlocked lesson nodes
+4. **Lesson node**: tap a node, answer questions, earn XP and CP on completion
+5. **Spelling Bee**: timed spelling rounds with the custom on-screen keyboard; streak tracked across days
+6. **Battle Arena**: select a boss, enter the fighting-game screen, answer questions to drain the boss's HP
+7. **Live AI session (Cogi Talk)**: full-screen nature scene, Cogi floats and speaks, timer runs
+8. **COGI reward**: on node completion, level-up, or 7-day streak, a mint is queued and processed to the child's wallet
+9. **Profile**: XP bar, level, streak count, CP balance, and wallet address
 
 ---
 
@@ -55,17 +55,17 @@ Recommended flow:
 
 CogniKids has two tiers:
 
-**Free** — access to the first lesson world, spelling bee, and one battle boss. Kids earn CP and COGI on all free content.
+**Free**: access to the first lesson world, spelling bee, and one battle boss. Kids earn CP and COGI on all free content.
 
-**Premium (subscription)** — unlocks all lesson worlds, all three battle bosses, extended Cogi Talk sessions, and the full skill tree. Billed through the Google Play Store. No separate payment gateway is needed — Play Store handles billing, receipts, and refunds.
+**Premium (subscription)**: unlocks all lesson worlds, all three battle bosses, extended Cogi Talk sessions, and the full skill tree. Billed through the Google Play Store. No separate payment gateway is needed since Play Store handles billing, receipts, and refunds.
 
-CP (Cogi Points) are earned inside the app regardless of tier and gate content progression. COGI tokens (on-chain) are minted regardless of tier — every child earns them for real learning milestones.
+CP (Cogi Points) are earned inside the app regardless of tier and gate content progression. COGI tokens are minted regardless of tier too, so every child earns them for real learning milestones.
 
 ---
 
 ## How Cardano Fits
 
-COGI is a native Cardano token minted under a fixed policy. It is not a wrapped asset or a points database entry — it is an on-chain asset sent to the child's wallet address.
+COGI is a native Cardano token minted under a fixed policy. It is not a wrapped asset or a points database entry. It gets sent as a real on-chain asset to the child's wallet address.
 
 **The flow:**
 
@@ -87,10 +87,10 @@ COGI is a native Cardano token minted under a fixed policy. It is not a wrapped 
 
 **Cardano-specific files:**
 ```
-src/lib/cardanoMint.ts     — transaction builder (CSL + Blockfrost)
-src/lib/blockfrost.ts      — Blockfrost API helpers
-src/lib/cogiRewards.ts     — reward queue and ledger logic
-app/kids/cardano/          — API route handlers (balance, mint, history, wallet)
+src/lib/cardanoMint.ts     - transaction builder (CSL + Blockfrost)
+src/lib/blockfrost.ts      - Blockfrost API helpers
+src/lib/cogiRewards.ts     - reward queue and ledger logic
+app/kids/cardano/          - API route handlers (balance, mint, history, wallet)
 ```
 
 ---
@@ -101,8 +101,8 @@ app/kids/cardano/          — API route handlers (balance, mint, history, walle
 - Live AI session screen with Cogi character, floating animation, timer, and mic controls
 - Structured skill lessons with node unlocking and XP
 - Spelling bee with streak tracking and daily bonus rewards
-- Battle arena — three boss characters (Word Wizard, Grammar Guardian, Number Knight), fighting-game UI, HP bars, attack animations, auto-advance on answer
-- COGI mint queue and ledger — queue writes synchronously, mint job processes async
+- Battle arena with three boss characters (Word Wizard, Grammar Guardian, Number Knight), fighting-game UI, HP bars, attack animations, auto-advance on answer
+- COGI mint queue and ledger: queue writes synchronously, mint job processes async
 - Blockfrost integration for UTxO fetching, protocol params, and tx submission
 - CSL-based transaction builder using the COGI native script policy
 - API endpoints: `/kids/cardano/balance`, `/kids/cardano/mint`, `/kids/cardano/history`
@@ -114,7 +114,7 @@ app/kids/cardano/          — API route handlers (balance, mint, history, walle
 
 ## Why It Matters
 
-The average child in West Africa has access to a smartphone but not to a savings account. COGI tokens are not a substitute for savings — but they establish a habit of ownership. A child's learning achievements are recorded on a public ledger that no company controls. That's the part you cannot build with a points database.
+The average child in West Africa has access to a smartphone but not to a savings account. COGI tokens are not a substitute for savings, but they establish a habit of ownership. A child's learning achievements are recorded on a public ledger that no company controls. That's the part you cannot build with a points database.
 
 ---
 
@@ -173,15 +173,15 @@ EXPO_PUBLIC_API_URL=
 
 ## Builder Verification Summary
 
-- [x] Official public repository linked — [github.com/kamal-ogtl/cogikids](https://github.com/kamal-ogtl/cogikids)
-- [x] Deployed product link — Google Play Store (under review, link to be added on approval)
+- [x] Official public repository linked: [github.com/kamal-ogtl/cogikids](https://github.com/kamal-ogtl/cogikids)
+- [x] Deployed product link: Google Play Store (under review, link to be added on approval)
 - [x] All 12 official weekly update posts linked above
 - [x] Cardano integration with real on-chain COGI token minting via Blockfrost + CSL
-- [x] Payment gateway described — Play Store subscription + CP in-app progression
+- [x] Payment gateway described: Play Store subscription + CP in-app progression
 - [x] Public evidence is verifiable via the repository and weekly X posts
 
 ---
 
 ## Contact
 
-Kamal Aliyu — kamalaliyu212@gmail.com
+Kamal Aliyu, kamalaliyu212@gmail.com
