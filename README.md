@@ -8,8 +8,8 @@ Built with Expo (React Native) and a Node.js/Hono backend. The app runs on both 
 
 ## What's inside
 
-**Live AI Session (Mieo Talk)**
-Kids tap into a full-screen session with Mieo, the app's mascot. Mieo speaks, listens, and responds using a Gemini-powered backend. The screen shows a nature scene, a live timer, and controls to pause, mute, or end the session.
+**Live AI Session (Cogi Talk)**
+Kids tap into a full-screen session with Cogi, the app's mascot. Cogi speaks, listens, and responds using a Gemini-powered backend. The screen shows a nature scene, a live timer, and controls to pause, mute, or end the session.
 
 **Skill Lessons**
 Structured learning paths broken into nodes. Each node unlocks after the previous one is completed. Progress is saved per kid profile and synced to the backend.
@@ -85,7 +85,7 @@ Scan the QR code with Expo Go or press `i` / `a` for iOS/Android simulator.
 cogniedufy-kids/
 ├── app/
 │   ├── (auth)/         # Entry, splash, login, onboarding, profile setup
-│   ├── (tabs)/         # Home, Skills, Bee, Live (Mieo), Arena, Profile
+│   ├── (tabs)/         # Home, Skills, Bee, Live (Cogi), Arena, Profile
 │   ├── battle/         # [bossId].tsx — fighting game battle screen
 │   ├── lesson/         # [nodeId].tsx — individual lesson node
 │   └── story/          # Story map and level screens
