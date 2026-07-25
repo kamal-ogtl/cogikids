@@ -9,7 +9,7 @@ Built with Expo (React Native) and a Node.js/Hono backend. The app runs on both 
 ## What's inside
 
 **Live AI Session (Cogi Talk)**
-Kids tap into a full-screen session with Cogi, the app's mascot. Cogi speaks, listens, and responds using a Gemini-powered backend. The screen shows a nature scene, a live timer, and controls to pause, mute, or end the session.
+Kids tap into a full-screen session with Cogi, the app's mascot. Cogi speaks, listens, and responds using Google Gemma 4 running on the backend. The screen shows a nature scene, a live timer, and controls to pause, mute, or end the session.
 
 **Skill Lessons**
 Structured learning paths broken into nodes. Each node unlocks after the previous one is completed. Progress is saved per kid profile and synced to the backend.
@@ -22,6 +22,23 @@ Three boss characters — Word Wizard, Grammar Guardian, Number Knight — each 
 
 **Profile & Progress**
 Each kid has a profile with level, XP, active streak, and a wallet address for receiving COGI tokens.
+
+---
+
+## Gemma 4 integration
+
+CogniKids uses Google Gemma 4 as the core AI engine for three things:
+
+**Live conversation (Cogi Talk)**
+When a child starts a session, their speech is sent to the backend where Gemma 4 generates a contextual, age-appropriate response. The reply is then spoken back through the device using text-to-speech. Gemma handles the full turn: understanding what the child said and producing a natural follow-up.
+
+**Lesson generation**
+Gemma 4 generates question sets for each lesson node based on the topic, difficulty level, and age group. This means lesson content is not hardcoded and can adapt as the curriculum expands.
+
+**Hint engine**
+When a child gets stuck on a spelling round or battle question, they can request a hint. Gemma 4 produces a contextual clue without giving away the answer directly.
+
+The Gemma calls live in `src/lib/gemini.ts` and the AI service layer in `src/services/ai/`.
 
 ---
 
@@ -109,5 +126,5 @@ cogniedufy-kids/
 - **Zustand** — client state (player, auth)
 - **Drizzle ORM + Supabase** — database
 - **Hono** — backend API (Node.js)
-- **Google Gemini** — AI conversation engine
+- **Google Gemma 4** — AI conversation and lesson generation engine
 - **Cardano (Preprod/Mainnet)** — COGI token minting via Blockfrost + CSL
